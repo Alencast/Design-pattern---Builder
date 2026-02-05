@@ -1,3 +1,6 @@
+
+
+
 class Sanduiche:
     def __init__(self, pão, queijo=None, presunto=None, alface=None, tomate=None, maionese=False):
         self.pão = pão
@@ -16,6 +19,9 @@ class Sanduiche:
 # Problema: construtor com muitos parâmetros, difícil de ler e manter
 
 # Sanduíche completo
+
+
+# new Sanduiche("integral", null, "presunto", null, null, true) parametros em java
 s1 = Sanduiche("integral", queijo="mussarela", presunto="presunto cozido", 
                alface="alface americana", tomate="tomate cereja", maionese=True)
 print("Completo:", s1)

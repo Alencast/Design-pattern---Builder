@@ -120,7 +120,19 @@ class SanduicheDirector:
         if not self._condimentos_adicionados:
             raise ValueError("Não é possível construir: condimentos devem ser adicionados")
         
-        return self.builder.build()
+        sanduiche = self.builder.build()
+        self.reset()  # Reseta automaticamente após build para permitir reutilização
+        return sanduiche
+    
+    def reset(self, builder=None):
+        # Reseta o director para construir um novo sanduíche
+        if builder:
+            self.builder = builder
+        
+        self._proteinas_adicionadas = False
+        self._vegetais_adicionados = False
+        self._condimentos_adicionados = False
+        return self
 
 
 # o cliente que vai definir os ingredientes, mas o director garante a ordem correta

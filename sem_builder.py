@@ -1,6 +1,3 @@
-
-
-
 class Sanduiche:
     def __init__(self, pão, queijo=None, presunto=None, alface=None, tomate=None, maionese=False):
         self.pão = pão
@@ -21,7 +18,9 @@ class Sanduiche:
 # Sanduíche completo
 
 
-# new Sanduiche("integral", null, "presunto", null, null, true) parametros em java
+# new Sanduiche("integral", null, "presunto", null, null, true, null, null, true, false, null, "tomate") parametros em java. 
+# Comentar que em python o builder não é tão necessário, pois temos parâmetros nomeados, 
+# mas usamos para exemplificar o padrão.
 s1 = Sanduiche("integral", queijo="mussarela", presunto="presunto cozido", 
                alface="alface americana", tomate="tomate cereja", maionese=True)
 print("Completo:", s1)

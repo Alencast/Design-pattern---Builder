@@ -64,6 +64,7 @@ class SanduicheDirector:
     def __init__(self, builder):
         self.builder = builder
         #  controlar a ordem de construção
+        # _ atributo interno privado, não se usa fora da classe
         self._proteinas_adicionadas = False
         self._vegetais_adicionados = False
         self._condimentos_adicionados = False
@@ -74,6 +75,7 @@ class SanduicheDirector:
             raise ValueError("Proteínas já foram adicionadas")
         
         if presunto:
+            #Fluent Interface
             self.builder.presunto(presunto)
         if queijo:
             self.builder.queijo(queijo)
